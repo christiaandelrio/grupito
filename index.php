@@ -1,12 +1,15 @@
-<?php require_once("inc/encabezado.php"); ?>
+
 <?php require_once("inc/bbdd.php"); ?>
+<?php $pagina = "index";
+	  $titulo = "Mi Grupito";
+?>
 <?php require_once("inc/funciones.php"); ?>
 
 <?php 
 	$productos = seleccionarOfertasPortada(NUMOFERTAS);
 	//print_r($productos);
 ?>
-
+<?php require_once("inc/encabezado.php"); ?>
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
