@@ -96,3 +96,57 @@ function seleccionarProducto($idProducto){
 	
 	return $row;
 }
+
+//Función para crear un usuario
+function insertarUsuario($usuario,$password){
+	$con = conectarBD();
+	
+	try{
+		$sql = "INSERT INTO usuarios (usuario,password) VALUES (:usuario,:password)";
+		
+		$stmt = $con->prepare($sql);
+		
+		$stmt->bindParam(':usuario', $usuario);
+		$stmt->bindParam(':password', $password);
+		
+		$stmt->execute();
+		
+		
+	}
+		
+	catch(PDOException $e){
+		echo "Error: Error al crear un usuario: ".$e->getMessage();
+		
+		file_put_contents("PDOErrors.txt", "\r\n".date('j F, Y, g:i a ').$e->getMessage(), FILE_APPEND);
+		exit;
+	}
+	
+	return $stmt->rowCount();
+}
+
+//Función para comprobar usuario
+function seleccionarUsuario($email,$password){
+	$con = conectarBD();
+	
+	try{
+		$sql = "SELECT * FROM usuarios WHERE usuario=:usuario";
+		
+		$stmt = $con->prepare($sql);
+		
+		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':password',$password);
+		
+		$stmt->execute();
+		
+		$row = $stmt -> fetch(PDO::FETCH_ASSOC);
+	}
+		
+	catch(PDOException $e){
+		echo "Error: Error al comprobar un usuario: ".$e->getMessage();
+		
+		file_put_contents("PDOErrors.txt", "\r\n".date('j F, Y, g:i a ').$e->getMessage(), FILE_APPEND);
+		exit;
+	}
+	
+	return $row;
+}

@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require_once("inc/bbdd.php"); ?>
 <?php require_once("inc/funciones.php"); ?>
 
 <?php 
@@ -16,50 +17,19 @@
 		<input type="text" class="form-control" id="password" name="password" value="<?php echo $password;?>"/>
 	  </div>
 	  
+	  <div class="form-group">
+		<label for="nombre">Nombre:</label>
+		<input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $nombre;?>"/>
+	  </div>
+	  
+	  <div class="form-group">
+		<label for="apellidos">Apellidos:</label>
+		<input type="text" class="form-control" id="apellidos" name="apellidos" value="<?php echo $apellidos;?>"/>
+	  </div>
+	  
 
 	 <button type="submit" class="btn btn-secondary" name="enviar" value="Enviar">Enviar</button>
 	 <a class="btn btn-primary " href="registro.php">Crear un usuario</a>
 	</form>
 </main>
 <?php } ?>
-<?php require_once("inc/encabezado.php"); ?>
-<?php if(empty($_REQUEST)){
-		$email = "";
-		$password = "";
-		imprimirFormulario($email,$password);
-	}
-	
-	else{
-		$email = recoge("email");
-		$password = recoge("password");
-		
-		$errores = "";
-		
-		if($email == ""){
-			$errores = $errores."<li>El email no puede estar vacío</li>";
-		}
-		
-		if($password == ""){
-			$errores = $errores."<li>La password no puede estar vacía</li>";
-		}
-		
-		if($errores != ""){
-			echo "<ul>
-					$errores
-				  </ul>";
-		}
-		
-		else{
-			$email = seleccionarUsuario($email,$password);
-		}
-	}
-	
-
-?>
-
-<?php require_once("inc/pie.php"); ?>
-
-
-
-
-

@@ -39,5 +39,20 @@ function mostrarProductos($productos){ ?>
 //Fin función mostrar productos
 ?>
 
+<?php 
+//Función para mostrar mensaje
+
+function mostrarMensaje($mensaje){ ?>
+	  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-5"><?php echo $mensaje; ?></h1>
+    </div>
+  </div>
+<?php
+}
+
+?>
+
 
 
