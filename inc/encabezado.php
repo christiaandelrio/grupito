@@ -44,6 +44,19 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="./css/jumbotron.css" rel="stylesheet">
+	<?php if($pagina=="Registro"){ ?>
+	   <script src='https://www.google.com/recaptcha/api.js?render=<?php echo CLAVE_SITIO_WEB; ?>'> 
+    </script>
+	
+    <script>
+    grecaptcha.ready(function() {
+    grecaptcha.execute('<?php echo CLAVE_SITIO_WEB ;?>', {action: 'formulario'})
+    .then(function(token) {
+    var recaptchaResponse = document.getElementById('recaptchaResponse');
+    recaptchaResponse.value = token;
+    });});
+    </script>
+	<?php } ?>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -70,9 +83,9 @@
 			<a href="carrito.php" class="nav-link"><i class="fas fa-shopping-cart"></i> (0)</a><!--El 0 son el número de elementos que hay de momento en el carrito-->
 	      </li>
 		  
-		  <?php if(isset($_SESSION['usuario'])){ ?>
+		  <?php if(isset($_SESSION['login'])){ ?>
 			  <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenido Fulanito</a>
+				<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenido, <?php echo $_SESSION['login'];?></a>
 				<div class="dropdown-menu" aria-labelledby="dropdown01">
 				  <a class="dropdown-item" href="misdatos.php">Mis datos</a>
 				  <a class="dropdown-item" href="mispedidos.php">Mis pedidos</a>

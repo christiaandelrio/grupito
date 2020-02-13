@@ -1,4 +1,4 @@
-
+<?php session_start();?>
 <?php require_once("inc/bbdd.php"); ?>
 <?php $pagina = "index";
 	  $titulo = "Mi Grupito";

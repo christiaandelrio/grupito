@@ -1,6 +1,10 @@
 <?php session_start(); ?>
+<?php require_once("inc/bbdd.php"); ?>
 <?php require_once("inc/funciones.php"); ?>
-
+<?php $pagina="Login";
+	  $titulo="Identifícate";
+?>
+<?php require_once("inc/encabezado.php"); ?>
 <?php 
 	function imprimirFormulario($email, $password){
 ?>
@@ -13,7 +17,7 @@
 	  
 	  <div class="form-group">
 		<label for="password">Contraseña:</label>
-		<input type="text" class="form-control" id="password" name="password" value="<?php echo $password;?>"/>
+		<input type="password" class="form-control" id="password" name="password" value="<?php echo $password;?>"/>
 	  </div>
 	  
 
@@ -22,7 +26,6 @@
 	</form>
 </main>
 <?php } ?>
-<?php require_once("inc/encabezado.php"); ?>
 <?php if(empty($_REQUEST)){
 		$email = "";
 		$password = "";
@@ -47,10 +50,22 @@
 			echo "<ul>
 					$errores
 				  </ul>";
+				  
+			mostrarFormulario($email,$password);
 		}
 		
 		else{
 			$email = seleccionarUsuario($email,$password);
+			$userOk= password_verify($password,$email["password"]);
+			
+			if($userOk){
+				$_SESSION["login"]=$email["email"];
+				header("Location:index.php");
+			}
+			else{
+				echo "Error al loguearte";
+				mostrarFormulario($email,$password);
+			}
 		}
 	}
 	
