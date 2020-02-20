@@ -7,3 +7,20 @@
 13 February, 2020, 11:32 am SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
 13 February, 2020, 11:34 am SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
 13 February, 2020, 11:34 am SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+17 February, 2020, 9:39 am SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+17 February, 2020, 9:40 am SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+17 February, 2020, 9:44 am SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+20 February, 2020, 1:07 pm SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+20 February, 2020, 1:08 pm SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+20 February, 2020, 1:11 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 1:15 pm SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '='delrio.lemos49@gmail.com'' at line 1
+20 February, 2020, 2:03 pm SQLSTATE[42S02]: Base table or view not found: 1146 Table 'grupito.usuario' doesn't exist
+20 February, 2020, 2:03 pm SQLSTATE[42S02]: Base table or view not found: 1146 Table 'grupito.usuario' doesn't exist
